@@ -24,7 +24,7 @@ This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognitio
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/MRxO11/jarvis-assistant.git
+   git clone https://github.com/MRxO11/jarvis-voice-assistant.git
    cd jarvis-assistant
 
 Install the required libraries: You can install the dependencies using pip:
@@ -41,15 +41,16 @@ python jarvis.py
 
 Voice Commands: Jarvis will listen to voice commands and respond accordingly. You can ask Jarvis to:
 
-Tell the time: "What is the time?"
-Tell the date: "What is the date today?"
-Search Google: "Search Google for [query]"
-Search Wikipedia: "Search Wikipedia for [query]"
-Tell a joke: "Tell me a joke"
-Give advice: "Give me some advice"
-Play music: "Play music"
-Open apps: "Open Discord" / "Close Discord" / "Open Telegram" / "Close Telegram"
-Fetch news: "What is the latest news?"
+- Tell the time: "What is the time?"
+- Tell the date: "What is the date today?"
+- Search Google: "Search Google for [query]"
+- Search Wikipedia: "Search Wikipedia for [query]"
+- Search Youtube: "Search Youtube for[query]"
+- Tell a joke: "Tell me a joke"
+- Give advice: "Give me some advice"
+- Open apps: "Open Discord" / "Close Discord" / "Open Telegram" / "Close Telegram" / "Open CMD" / "Close CMD"
+- Fetch news: "What is the latest news?"
+
 Wake Word Detection: The assistant supports wake word detection, listening for the words "terminator" or "jarvis" to activate it.
 
 To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" After that it will start listen for your commands
