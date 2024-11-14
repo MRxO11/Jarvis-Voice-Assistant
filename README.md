@@ -29,11 +29,12 @@ This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognitio
 
 Install the required libraries: You can install the dependencies using pip:
 pip install -r requirements.txt
+
 Set up API Keys:
 
-For WeatherAPI: Get your API key from WeatherAPI.
-For NewsAPI: Get your API key from NewsAPI.
-Modify the api_key variables in the code: Replace the empty strings with your actual API keys for both WeatherAPI and NewsAPI.
+- For WeatherAPI: Get your API key from WeatherAPI.
+- For NewsAPI: Get your API key from NewsAPI.
+- Modify the api_key variables in the code: Replace the empty strings with your actual API keys for both WeatherAPI and NewsAPI.
 
 How to Use
 Run the Assistant: To start the assistant, run the following Python script:
