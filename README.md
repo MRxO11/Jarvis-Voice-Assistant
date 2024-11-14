@@ -25,7 +25,7 @@ This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognitio
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/MRxO11/jarvis-voice-assistant.git
-   cd jarvis-assistant
+   cd jarvis-voice-assistant
 
 Install the required libraries: You can install the dependencies using pip:
 pip install -r requirements.txt
