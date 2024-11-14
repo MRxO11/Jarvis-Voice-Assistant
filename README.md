@@ -36,9 +36,10 @@ Set up API Keys:
 - For NewsAPI: Get your API key from NewsAPI.
 - Modify the api_key variables in the code: Replace the empty strings with your actual API keys for both WeatherAPI and NewsAPI.
 
-How to Use
+How to Use:
+
 Run the Assistant: To start the assistant, run the following Python script:
-python jarvis.py
+**python jarvis.py**
 
 Voice Commands: Jarvis will listen to voice commands and respond accordingly. You can ask Jarvis to:
 
@@ -59,9 +60,11 @@ To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" Afte
 
 ![Screenshot 2024-11-14 223330](https://github.com/user-attachments/assets/a153cfb0-81d8-4c69-9c2f-0d5897ef034b)
 
-Important Notes
+###**Important Notes**
+
 To use wake word detection, you need to set up Picovoice Porcupine and input your access key.
 Ensure you have the required APIs and dependencies set up in your environment for all features to work correctly.
 
-Contributing
+###**Contributing**
+
 Feel free to fork the repository, make improvements, and submit pull requests. Contributions are always welcome!
