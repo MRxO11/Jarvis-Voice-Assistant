@@ -55,16 +55,16 @@ Voice Commands: Jarvis will listen to voice commands and respond accordingly. Yo
 
 Wake Word Detection: The assistant supports wake word detection, listening for the words "terminator" or "jarvis" to activate it.
 
-To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" After that it will start listen for your commands
+To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" After that it will start listening for your commands
 
 
 ![Screenshot 2024-11-14 223330](https://github.com/user-attachments/assets/a153cfb0-81d8-4c69-9c2f-0d5897ef034b)
 
-###**Important Notes**
+**Important Notes**
 
 To use wake word detection, you need to set up Picovoice Porcupine and input your access key.
 Ensure you have the required APIs and dependencies set up in your environment for all features to work correctly.
 
-###**Contributing**
+**Contributing**
 
 Feel free to fork the repository, make improvements, and submit pull requests. Contributions are always welcome!
