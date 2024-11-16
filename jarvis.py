@@ -184,6 +184,65 @@ def open_cmd():
 def close_cmd():
     os.system('taskkill /f /im cmd.exe')
 
+# Function to Control the Volume of the System
+
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+from comtypes import CLSCTX_ALL
+
+def get_volume_control():
+    devices = AudioUtilities.GetSpeakers()
+    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    return interface.QueryInterface(IAudioEndpointVolume)
+
+# Function to increase volume
+def volume_up(step=0.1):
+    try:
+        volume = get_volume_control()
+        current_volume = volume.GetMasterVolumeLevelScalar()
+        new_volume = min(1.0, current_volume + step)  # Ensure it doesn't go above 1.0
+        volume.SetMasterVolumeLevelScalar(new_volume, None)
+        jarvis_speak(f"Volume increased to {int(new_volume * 100)}%.")
+    except Exception as e:
+        jarvis_speak("I couldn't adjust the volume.")
+        print(f"Error: {e}")
+
+# Function to decrease volume
+def volume_down(step=0.1):
+    try:
+        volume = get_volume_control()
+        current_volume = volume.GetMasterVolumeLevelScalar()
+        new_volume = max(0.0, current_volume - step)  # Ensure it doesn't go below 0.0
+        volume.SetMasterVolumeLevelScalar(new_volume, None)
+        jarvis_speak(f"Volume decreased to {int(new_volume * 100)}%.")
+    except Exception as e:
+        jarvis_speak("I couldn't adjust the volume.")
+        print(f"Error: {e}")
+
+#Function to Control Screen Brightness
+
+import screen_brightness_control as sbc
+
+# Function to increase brightness
+def brightness_up(step=10):
+    try:
+        current_brightness = sbc.get_brightness(display=0)[0] 
+        new_brightness = min(100, current_brightness + step)  # Ensure it doesn't exceed 100
+        sbc.set_brightness(new_brightness, display=0)  
+        jarvis_speak(f"Brightness increased to {new_brightness} percent.")
+    except Exception as e:
+        jarvis_speak("I couldn't adjust the brightness.")
+        print(f"Error: {e}")
+
+# Function to decrease brightness
+def brightness_down(step=10):
+    try:
+        current_brightness = sbc.get_brightness(display=0)[0]  
+        new_brightness = max(0, current_brightness - step)  # Ensure it doesn't go below 0
+        sbc.set_brightness(new_brightness, display=0) 
+        jarvis_speak(f"Brightness decreased to {new_brightness} percent.")
+    except Exception as e:
+        jarvis_speak("I couldn't adjust the brightness.")
+        print(f"Error: {e}")
 
 # Main function to run the assistant
 def run_jarvis():
@@ -214,6 +273,18 @@ def run_jarvis():
 
             elif ' close command prompt' in query or 'close cmd' in query:
                 close_cmd()
+
+            elif "volume up" in query:
+                volume_up()
+    
+            elif "volume down" in query:
+                volume_down()
+
+            elif "brightness up" in query:
+                brightness_up()
+
+            elif "brightness down" in query:
+                brightness_down()
 
             elif "weather" in query:
                  jarvis_speak("Which city's weather would you like to search for?")
