@@ -17,7 +17,7 @@ This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognitio
 - **Jokes and Advice**: Tell random jokes and give advice.
 - **News**: Fetch the latest news headlines from **NewsAPI**.
 - **Open Applications**: Open and close apps like **Discord** and **Telegram**.
-
+- **Control Volume and Brightness**: Increase and Decrease the Volume and Brightness
 ---
 
 ### **Setup Instructions**
@@ -52,7 +52,7 @@ Voice Commands: Jarvis will listen to voice commands and respond accordingly. Yo
 - Give advice: "Give me some advice"
 - Open apps: "Open Discord" / "Close Discord" / "Open Telegram" / "Close Telegram" / "Open CMD" / "Close CMD"
 - Fetch news: "What is the latest news?"
-
+- Control Volume and Brightness: " Volume / Brightness up or Volume / Brightness Down"
 Wake Word Detection: The assistant supports wake word detection, listening for the words "terminator" or "jarvis" to activate it.
 
 To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" After that it will start listening for your commands
