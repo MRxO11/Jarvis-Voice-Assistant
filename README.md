@@ -53,6 +53,7 @@ Voice Commands: Jarvis will listen to voice commands and respond accordingly. Yo
 - Open apps: "Open Discord" / "Close Discord" / "Open Telegram" / "Close Telegram" / "Open CMD" / "Close CMD"
 - Fetch news: "What is the latest news?"
 - Control Volume and Brightness: " Volume / Brightness up or Volume / Brightness Down"
+
 Wake Word Detection: The assistant supports wake word detection, listening for the words "terminator" or "jarvis" to activate it.
 
 To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" After that it will start listening for your commands
