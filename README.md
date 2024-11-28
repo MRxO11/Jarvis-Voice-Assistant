@@ -66,6 +66,3 @@ To Run it Just Say "JARVIS" and wait for it to recognize then say "Wake Up" Afte
 To use wake word detection, you need to set up Picovoice Porcupine and input your access key.
 Ensure you have the required APIs and dependencies set up in your environment for all features to work correctly.
 
-**Contributing**
-
-Feel free to fork the repository, make improvements, and submit pull requests. Contributions are always welcome!
