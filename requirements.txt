@@ -8,3 +8,4 @@ pvporcupine==1.8.1
 webbrowser==2.0
 screen-brightness-control==0.14.0
 pynput==1.7.6
+OpenAI
