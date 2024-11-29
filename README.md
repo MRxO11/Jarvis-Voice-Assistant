@@ -1,8 +1,8 @@
 # Jarvis Voice Assistant
 
-**Jarvis Voice Assistant** is a Python-based personal assistant that can perform various tasks using voice commands. It includes features like time, weather updates, Google search, Wikipedia search, playing jokes, and much more.
+**Jarvis Voice Assistant** is a Python-based personal assistant that can perform various tasks using voice commands. It includes features like time, weather updates, Google search, Wikipedia search, playing jokes, and much more. One of the most exciting features of Jarvis is its ability to engage in a continuous chat with Grok AI to have human-like conversations.
 
-This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognition` for voice recognition, and external APIs like `WeatherAPI`, `NewsAPI`, and others for fetching real-time data.
+This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognition` for voice recognition, and external APIs like `WeatherAPI`, `NewsAPI`, `GrokAI` and others for fetching real-time data.
 
 ---
 
@@ -18,6 +18,7 @@ This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognitio
 - **News**: Fetch the latest news headlines from **NewsAPI**.
 - **Open Applications**: Open and close apps like **Discord** and **Telegram**.
 - **Control Volume and Brightness**: Increase and Decrease the Volume and Brightness
+- **Conversation/Chat**: Can Chat with Jarvis and it will give responce like a real Tony Stark Personal Assistant.
 ---
 
 ### **Setup Instructions**
@@ -34,7 +35,8 @@ Set up API Keys:
 
 - For WeatherAPI: Get your API key from WeatherAPI.
 - For NewsAPI: Get your API key from NewsAPI.
-- Modify the api_key variables in the code: Replace the empty strings with your actual API keys for both WeatherAPI and NewsAPI.
+- For GrokAPI: Get your API key from xAI.
+- Modify the api_key variables in the code: Replace the empty strings with your actual API keys.
 
 How to Use:
 
@@ -53,6 +55,7 @@ Voice Commands: Jarvis will listen to voice commands and respond accordingly. Yo
 - Open apps: "Open Discord" / "Close Discord" / "Open Telegram" / "Close Telegram" / "Open CMD" / "Close CMD"
 - Fetch news: "What is the latest news?"
 - Control Volume and Brightness: " Volume / Brightness up or Volume / Brightness Down"
+- Can Chat With Jarvis: "Let's Chat/Conversation" / "Stop/Exit" 
 
 Wake Word Detection: The assistant supports wake word detection, listening for the words "terminator" or "jarvis" to activate it.
 
