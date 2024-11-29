@@ -2,7 +2,7 @@
 
 **Jarvis Voice Assistant** is a Python-based personal assistant that can perform various tasks using voice commands. It includes features like time, weather updates, Google search, Wikipedia search, playing jokes, and much more. One of the most exciting features of Jarvis is its ability to engage in a continuous chat to have human-like conversations.
 
-This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognition` for voice recognition, and external APIs like `WeatherAPI`, `NewsAPI`, `GrokAI` and others for fetching real-time data.
+This project uses libraries like `pyttsx3` for text-to-speech, `SpeechRecognition` for voice recognition, and external APIs like `WeatherAPI`, `NewsAPI`, `GrokAPI` and others for fetching real-time data.
 
 ---
 
