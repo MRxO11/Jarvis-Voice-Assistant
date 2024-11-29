@@ -1,7 +1,7 @@
 
 #########################     Made By MRxO1    ############################################
-#   #   #   #   #   #   #   #   #   # Guys Feel Free to Add New Feature In This Jarvis Assistance  
-#   #   #   #   #   #   #   #   #   # You Can Add AI Conversation, Sentiment Analyser, Tone Modifier, .... And Many Other Features.
+#   #   #   #   #   #   #   #   #   # Guys We Can Add Many More Amazing Features In This Assistant...
+#   #   #   #   #   #   #   #   #   # You Can Chat With Jarvis Just Like Shown In Iron Man Movie, It Is Your Own Personal Jarvis!
 
 import pyttsx3
 import speech_recognition as sr
@@ -157,6 +157,53 @@ def fetch_news():
     else:
         jarvis_speak("I could not retrieve the news at the moment.")
 
+# Conversitional AI Using xAI Grok
+
+from openai import OpenAI
+import json
+
+
+def grok_conversation(prompt):
+    try:
+        MODEL_NAME = "grok-beta"
+        XAI_API_KEY = "API_KEY"
+
+        client = OpenAI(
+            api_key="",
+            base_url="https://api.x.ai/v1",
+        )
+
+        messages = [
+            {"role": "system", "content": "You are a highly intelligent AI assistant named Jarvis, just like Tony Stark's personal assistant. You're cool, calm, and always ready with a quick wit or a snarky remark. You give smart suggestions, crack jokes, and always keep it classy — just like Tony would want."},
+            {"role": "user", "content": prompt}
+        ]
+
+        response = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages = messages,
+        )
+        print(response)
+        print(response.choices[0].message.content)
+        return response.choices[0].message.content
+  
+    except Exception as e:
+        return f"General error: {e}"
+
+# Function to handle conversation with Grok AI
+def handle_grok_conversation():
+    jarvis_speak("What would you like to talk about")
+    while True:
+        user_input = take_command()
+        if user_input:
+            if "exit" in user_input or "stop" in user_input:
+                jarvis_speak("Goodbye! Exiting the chat now.")
+                break
+
+            ai_response = grok_conversation(user_input)
+            jarvis_speak(ai_response)  
+            
+        else:
+            jarvis_speak("I didn't catch that. Could you please repeat?")
 
 # Offline  
 
@@ -286,6 +333,9 @@ def run_jarvis():
             elif "brightness down" in query:
                 brightness_down()
 
+            elif "chat" in query or "conversation" in query:
+                handle_grok_conversation()
+            
             elif "weather" in query:
                  jarvis_speak("Which city's weather would you like to search for?")
                  city = take_command()
